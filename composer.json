@@ -1,0 +1,35 @@
+{
+    "name": "evilfreelancer/rezdi-api-php",
+    "description": "Rezdi API PHP7 client",
+    "homepage": "https://developers.rezdy.com/",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "rezdi",
+        "client",
+        "rest-api",
+        "api-client"
+    ],
+    "authors": [
+        {
+            "name": "Paul Rock",
+            "email": "paul@drteam.rocks"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Rezdi\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "vlucas/phpdotenv": "^3.6"
+    }
+}
