@@ -3,17 +3,20 @@
 namespace Rezdi\Endpoints;
 
 use Rezdi\Client;
+use Rezdi\Interfaces\ProductInterface;
+use Rezdi\Interfaces\ProductsInterface;
+use Rezdi\Interfaces\QueryInterface;
 
-class Products extends Client
+class Products extends Client implements ProductInterface, ProductsInterface
 {
     /**
      * Get product
      *
      * @param int $productCode
      *
-     * @return $this
+     * @return QueryInterface
      */
-    public function __invoke(string $productCode)
+    public function __invoke(string $productCode): ProductInterface
     {
         $this->productCode = $productCode;
 
@@ -24,8 +27,12 @@ class Products extends Client
         return $this;
     }
 
-    // Create product
-    public function create()
+    /**
+     * Create product
+     *
+     * @return \Rezdi\Interfaces\QueryInterface
+     */
+    public function create(): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'post';
@@ -34,8 +41,12 @@ class Products extends Client
         return $this;
     }
 
-    // Update product
-    public function update()
+    /**
+     * Update product
+     *
+     * @return \Rezdi\Interfaces\QueryInterface
+     */
+    public function update(): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'put';
@@ -44,8 +55,12 @@ class Products extends Client
         return $this;
     }
 
-    // Delete product
-    public function delete()
+    /**
+     * Delete product
+     *
+     * @return \Rezdi\Interfaces\QueryInterface
+     */
+    public function delete(): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'delete';
@@ -57,9 +72,9 @@ class Products extends Client
     /**
      * Search products
      *
-     * @return $this
+     * @return \Rezdi\Interfaces\QueryInterface
      */
-    public function search(): self
+    public function search(): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'get';
@@ -68,8 +83,12 @@ class Products extends Client
         return $this;
     }
 
-    // Search marketplace products
-    public function searchMarketplace()
+    /**
+     * Search marketplace products
+     *
+     * @return \Rezdi\Interfaces\QueryInterface
+     */
+    public function searchMarketplace(): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'get';
@@ -78,8 +97,12 @@ class Products extends Client
         return $this;
     }
 
-    // Get product pickups
-    public function getPickups()
+    /**
+     * Get product pickups
+     *
+     * @return \Rezdi\Interfaces\QueryInterface
+     */
+    public function getPickups(): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'get';
@@ -88,8 +111,12 @@ class Products extends Client
         return $this;
     }
 
-    // Add product image
-    public function getImages()
+    /**
+     * Add product image
+     *
+     * @return \Rezdi\Interfaces\QueryInterface
+     */
+    public function createImage(): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'post';
@@ -98,8 +125,14 @@ class Products extends Client
         return $this;
     }
 
-    // Remove product Image
-    public function getImage(string $mediaId)
+    /**
+     * Remove product Image
+     *
+     * @param string $mediaId
+     *
+     * @return \Rezdi\Interfaces\QueryInterface
+     */
+    public function getImage(string $mediaId): QueryInterface
     {
         // Set HTTP params
         $this->type     = 'delete';

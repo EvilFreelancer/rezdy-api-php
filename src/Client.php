@@ -5,18 +5,28 @@ namespace Rezdi;
 use BadMethodCallException;
 use ErrorException;
 use GuzzleHttp\Exception\ClientException;
-use Rezdi\Endpoints\Products;
+
+// Root query
+use Rezdi\Interfaces\QueryInterface;
+
+// Availability
+use Rezdi\Interfaces\AvailabilityInterface as Availability;
+
+// Products
+use Rezdi\Interfaces\ProductsInterface as Products;
+use Rezdi\Interfaces\ProductInterface as Product;
 
 /**
- * @property Products $products  Products management
+ * @property Products     $products      Products management
+ * @property Availability $availability  Availability of products
  *
- * @method Products product(string $productCode)
+ * @method Product product(string $productCode)
  *
  * Single entry point for all classes
  *
  * @package Rezdi
  */
-class Client
+class Client implements QueryInterface
 {
     use HttpTrait;
 
