@@ -1,6 +1,6 @@
 <?php
 
-namespace Rezdi;
+namespace Rezdy;
 
 use InvalidArgumentException;
 

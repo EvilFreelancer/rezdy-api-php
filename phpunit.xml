@@ -13,7 +13,7 @@
         <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
     </logging>
     <testsuites>
-        <testsuite name="Rezdi API on PHP tests">
+        <testsuite name="Rezdy API on PHP tests">
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>

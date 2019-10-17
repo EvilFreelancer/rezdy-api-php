@@ -8,7 +8,7 @@ if (file_exists(__DIR__ . '/.env')) {
 }
 
 // Instantiate client
-$client = new \Rezdi\Client(getenv('API_KEY'));
+$client = new \Rezdy\Client(getenv('API_KEY'));
 
 // Get list of products
 $products = $client->products->search()->exec();

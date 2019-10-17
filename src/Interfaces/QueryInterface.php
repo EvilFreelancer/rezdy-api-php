@@ -1,6 +1,6 @@
 <?php
 
-namespace Rezdi\Interfaces;
+namespace Rezdy\Interfaces;
 
 use Psr\Http\Message\ResponseInterface;
 
@@ -12,7 +12,7 @@ interface QueryInterface
      * @return null|object Array with data or NULL if error
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \ErrorException
-     * @throws \Rezdi\Exceptions\EmptyResults
+     * @throws \Rezdy\Exceptions\EmptyResults
      */
     public function exec();
 
@@ -22,7 +22,7 @@ interface QueryInterface
      * @return null|\Psr\Http\Message\ResponseInterface RAW response or NULL if error
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \ErrorException
-     * @throws \Rezdi\Exceptions\EmptyResults
+     * @throws \Rezdy\Exceptions\EmptyResults
      */
     public function raw(): ?ResponseInterface;
 }

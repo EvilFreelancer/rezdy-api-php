@@ -1,11 +1,11 @@
 <?php
 
-namespace Rezdi\Endpoints;
+namespace Rezdy\Endpoints;
 
-use Rezdi\Client;
-use Rezdi\Interfaces\ProductInterface;
-use Rezdi\Interfaces\ProductsInterface;
-use Rezdi\Interfaces\QueryInterface;
+use Rezdy\Client;
+use Rezdy\Interfaces\ProductInterface;
+use Rezdy\Interfaces\ProductsInterface;
+use Rezdy\Interfaces\QueryInterface;
 
 class Products extends Client implements ProductInterface, ProductsInterface
 {
@@ -30,7 +30,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
     /**
      * Create product
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function create(): QueryInterface
     {
@@ -44,7 +44,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
     /**
      * Update product
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function update(): QueryInterface
     {
@@ -58,7 +58,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
     /**
      * Delete product
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function delete(): QueryInterface
     {
@@ -72,7 +72,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
     /**
      * Search products
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function search(): QueryInterface
     {
@@ -86,7 +86,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
     /**
      * Search marketplace products
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function searchMarketplace(): QueryInterface
     {
@@ -100,7 +100,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
     /**
      * Get product pickups
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function getPickups(): QueryInterface
     {
@@ -114,7 +114,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
     /**
      * Add product image
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function createImage(): QueryInterface
     {
@@ -130,7 +130,7 @@ class Products extends Client implements ProductInterface, ProductsInterface
      *
      * @param string $mediaId
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function getImage(string $mediaId): QueryInterface
     {

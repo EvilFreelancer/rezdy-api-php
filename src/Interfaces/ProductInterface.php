@@ -1,34 +1,34 @@
 <?php
 
-namespace Rezdi\Interfaces;
+namespace Rezdy\Interfaces;
 
 interface ProductInterface
 {
     /**
      * Update product
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function update(): QueryInterface;
 
     /**
      * Delete product
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function delete(): QueryInterface;
 
     /**
      * Get product pickups
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function getPickups(): QueryInterface;
 
     /**
      * Add product image
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function createImage(): QueryInterface;
 
@@ -37,7 +37,7 @@ interface ProductInterface
      *
      * @param string $mediaId
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function getImage(string $mediaId): QueryInterface;
 }

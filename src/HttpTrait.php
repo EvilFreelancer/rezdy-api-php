@@ -1,18 +1,17 @@
 <?php
 
-namespace Rezdi;
+namespace Rezdy;
 
-use GuzzleHttp\Exception\GuzzleException;
 use ErrorException;
 use GuzzleHttp\RequestOptions;
 use Psr\Http\Message\ResponseInterface;
-use Rezdi\Exceptions\EmptyResults;
+use Rezdy\Exceptions\EmptyResults;
 
 /**
  * @author  Paul Rock <paul@drteam.rocks>
  * @link    https://drteam.rocks
  * @license MIT
- * @package Rezdi
+ * @package Rezdy
  */
 trait HttpTrait
 {
@@ -26,7 +25,7 @@ trait HttpTrait
     /**
      * Object of main config
      *
-     * @var Config
+     * @var \Rezdy\Config
      */
     protected $config;
 
@@ -37,9 +36,9 @@ trait HttpTrait
      * @param string $url    endpoint url
      * @param mixed  $params List of parameters
      *
-     * @return null|ResponseInterface
-     * @throws GuzzleException
-     * @throws ErrorException
+     * @return null|\Psr\Http\Message\ResponseInterface
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \ErrorException
      */
     private function repeatRequest($type, $url, $params): ?ResponseInterface
     {
@@ -81,9 +80,9 @@ trait HttpTrait
      * Execute request and return response
      *
      * @return null|object Array with data or NULL if error
-     * @throws GuzzleException
-     * @throws ErrorException
-     * @throws EmptyResults
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \ErrorException
+     * @throws \Rezdy\Exceptions\EmptyResults
      */
     public function exec()
     {
@@ -93,10 +92,10 @@ trait HttpTrait
     /**
      * Execute query and return RAW response from remote API
      *
-     * @return null|ResponseInterface RAW response or NULL if error
-     * @throws GuzzleException
-     * @throws ErrorException
-     * @throws EmptyResults
+     * @return null|\Psr\Http\Message\ResponseInterface RAW response or NULL if error
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \ErrorException
+     * @throws \Rezdy\Exceptions\EmptyResults
      */
     public function raw(): ?ResponseInterface
     {
@@ -112,9 +111,9 @@ trait HttpTrait
      * @param bool   $raw      Return data in raw format
      *
      * @return null|object|ResponseInterface Array with data, RAW response or NULL if error
-     * @throws GuzzleException
-     * @throws ErrorException
-     * @throws EmptyResults
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     * @throws \ErrorException
+     * @throws \Rezdy\Exceptions\EmptyResults
      */
     private function doRequest($type, $endpoint, $params = null, bool $raw = false)
     {
@@ -125,7 +124,7 @@ trait HttpTrait
         $result = $this->repeatRequest($type, $endpoint, $params);
 
         if (null === $result) {
-            throw new EmptyResults('Empty results returned from Rezdi API');
+            throw new EmptyResults('Empty results returned from Rezdy API');
         }
 
         // Return RAW result if required

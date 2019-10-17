@@ -1,6 +1,6 @@
 <?php
 
-namespace Rezdi;
+namespace Rezdy;
 
 use ErrorException;
 
@@ -63,7 +63,7 @@ class Config
 
             // Main parameters
             'timeout'         => 20,
-            'user_agent'      => 'Rezdi PHP Client',
+            'user_agent'      => 'Rezdy PHP Client',
             'base_uri'        => 'https://api.rezdy.com/v1'
         ];
 

@@ -8,7 +8,7 @@
 
 # Rezdy API PHP7 client
 
-    composer require evilfreelancer/rezdi-api-php
+    composer require evilfreelancer/rezdy-api-php
 
 ## How to use
 

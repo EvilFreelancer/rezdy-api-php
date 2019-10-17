@@ -1,17 +1,17 @@
 <?php
 
-namespace Rezdi\Endpoints;
+namespace Rezdy\Endpoints;
 
-use Rezdi\Client;
-use Rezdi\Interfaces\AvailabilityInterface;
-use Rezdi\Interfaces\QueryInterface;
+use Rezdy\Client;
+use Rezdy\Interfaces\AvailabilityInterface;
+use Rezdy\Interfaces\QueryInterface;
 
 class Availability extends Client implements AvailabilityInterface
 {
     /**
      * Create availability
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function create(): QueryInterface
     {
@@ -27,7 +27,7 @@ class Availability extends Client implements AvailabilityInterface
      *
      * @param string $sessionId
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function update(string $sessionId): QueryInterface
     {
@@ -43,7 +43,7 @@ class Availability extends Client implements AvailabilityInterface
      *
      * @param string $sessionId
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function delete(string $sessionId): QueryInterface
     {
@@ -57,7 +57,7 @@ class Availability extends Client implements AvailabilityInterface
     /**
      * Search availability
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function search(): QueryInterface
     {
@@ -71,7 +71,7 @@ class Availability extends Client implements AvailabilityInterface
     /**
      * Create availability batch
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function createBatch(): QueryInterface
     {
@@ -88,7 +88,7 @@ class Availability extends Client implements AvailabilityInterface
      * @param string $productCode
      * @param string $startTimeLocal
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function updateStartingAt(string $productCode, string $startTimeLocal): QueryInterface
     {
@@ -105,7 +105,7 @@ class Availability extends Client implements AvailabilityInterface
      * @param string $productCode
      * @param string $startTimeLocal
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function deleteStartingAt(string $productCode, string $startTimeLocal): QueryInterface
     {

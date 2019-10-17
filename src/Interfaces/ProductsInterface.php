@@ -1,27 +1,27 @@
 <?php
 
-namespace Rezdi\Interfaces;
+namespace Rezdy\Interfaces;
 
 interface ProductsInterface
 {
     /**
      * Create product
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function create(): QueryInterface;
 
     /**
      * Search products
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function search(): QueryInterface;
 
     /**
      * Search marketplace products
      *
-     * @return \Rezdi\Interfaces\QueryInterface
+     * @return \Rezdy\Interfaces\QueryInterface
      */
     public function searchMarketplace(): QueryInterface;
 }

@@ -1,11 +1,11 @@
 {
-    "name": "evilfreelancer/rezdi-api-php",
-    "description": "Rezdi API PHP7 client",
+    "name": "evilfreelancer/rezdy-api-php",
+    "description": "Rezdy API PHP7 client",
     "homepage": "https://developers.rezdy.com/",
     "type": "library",
     "license": "MIT",
     "keywords": [
-        "rezdi",
+        "rezdy",
         "client",
         "rest-api",
         "api-client"
@@ -19,7 +19,7 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Rezdi\\": "src/"
+            "Rezdy\\": "./src/"
         }
     },
     "require": {

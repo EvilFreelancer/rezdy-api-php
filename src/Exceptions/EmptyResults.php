@@ -1,6 +1,6 @@
 <?php
 
-namespace Rezdi\Exceptions;
+namespace Rezdy\Exceptions;
 
 use Exception;
 

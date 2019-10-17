@@ -1,20 +1,20 @@
 <?php
 
-namespace Rezdi;
+namespace Rezdy;
 
 use BadMethodCallException;
 use ErrorException;
 use GuzzleHttp\Exception\ClientException;
 
 // Root query
-use Rezdi\Interfaces\QueryInterface;
+use Rezdy\Interfaces\QueryInterface;
 
 // Availability
-use Rezdi\Interfaces\AvailabilityInterface as Availability;
+use Rezdy\Interfaces\AvailabilityInterface as Availability;
 
 // Products
-use Rezdi\Interfaces\ProductsInterface as Products;
-use Rezdi\Interfaces\ProductInterface as Product;
+use Rezdy\Interfaces\ProductsInterface as Products;
+use Rezdy\Interfaces\ProductInterface as Product;
 
 /**
  * @property Products     $products      Products management
@@ -24,7 +24,7 @@ use Rezdi\Interfaces\ProductInterface as Product;
  *
  * Single entry point for all classes
  *
- * @package Rezdi
+ * @package Rezdy
  */
 class Client implements QueryInterface
 {
@@ -66,7 +66,7 @@ class Client implements QueryInterface
      *
      * @param string|array|Config $config
      *
-     * @throws ErrorException
+     * @throws \ErrorException
      */
     public function __construct($config)
     {
@@ -96,7 +96,7 @@ class Client implements QueryInterface
      */
     private function snakeToPascal(string $str): string
     {
-        // Remove underscores, capitalize words, squash, lowercase first.
+        // Remove underscores, capitalize words
         return str_replace(' ', '', ucwords(str_replace('_', ' ', $str)));
     }
 
@@ -106,7 +106,7 @@ class Client implements QueryInterface
      * @param string $name
      *
      * @return bool|object
-     * @throws BadMethodCallException
+     * @throws \BadMethodCallException
      */
     public function __get(string $name)
     {
@@ -144,7 +144,7 @@ class Client implements QueryInterface
      * @param array  $arguments
      *
      * @return bool|object
-     * @throws BadMethodCallException
+     * @throws \BadMethodCallException
      */
     public function __call(string $name, array $arguments)
     {
@@ -189,7 +189,7 @@ class Client implements QueryInterface
      * @param string $name
      * @param mixed  $value
      *
-     * @throws BadMethodCallException
+     * @throws \BadMethodCallException
      */
     public function __set(string $name, $value)
     {
